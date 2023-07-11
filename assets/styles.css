@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.apresentacao {
+    display: flex;
+    flex-direction: column;
+    padding: 70px;
+    background-color: red;
+    width: 100%;
+    float: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+    color: white;
+    float: right;
+}
+
