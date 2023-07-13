@@ -16,18 +16,28 @@
   --sakura-color3: #bd2d87;
 }
 
+/* .name {
+  background-color: #918ef4;
+  font-size: 25px;
+  margin: 2px;
+  padding: 2px;
+  border-radius: 15px;
+  
+} */
 .apresentacao {
   display: flex;
   flex-direction: column;
   max-width: 400px;
   width: 100%;
   float: left;
-  background: rgb(223, 153, 240);
+  background-image: url("https://s2.glbimg.com/FRyrYDBiOhDglCRobjP2Nxvg0Po=/e.glbimg.com/og/ed/f/original/2017/01/12/van-gogh.gif");
+  background-size: cover;
+  /* background: rgb(223, 153, 240);
   background: linear-gradient(
     0deg,
     rgba(223, 153, 240, 1) 0%,
     rgba(189, 45, 135, 1) 100%
-  );
+  ); */
   min-height: 100vh;
   font-size: 30px;
   border-right: 5px solid white;
@@ -48,6 +58,7 @@
   color: var(--text-color);
   margin: 20px;
   padding: 15px;
+  font-size: 30px;
   text-align: center;
 }
 
@@ -56,31 +67,56 @@
   color: var(--text-color);
 }
 
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.icons:hover {
+  border-radius: 50%;
+}
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   padding: 50px;
-  background-image: url("https://images.unsplash.com/photo-1557409518-691ebcd96038?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(7, 6, 51);
+  background: linear-gradient(
+    90deg,
+    rgba(7, 6, 51, 1) 0%,
+    rgba(49, 89, 251, 1) 50%,
+    rgba(118, 209, 255, 1) 100%
+  );
   min-height: 100vh;
   flex: 1;
   font-family: "Inter" bold, sans-serif;
   font-size: 22px;
   color: white;
-  text-shadow: ;
 }
 
 .data {
-  background: rgb(223, 153, 240);
-  background: radial-gradient(
-    circle,
-    rgba(223, 153, 240, 0.7357317927170868) 0%,
-    rgba(223, 153, 240, 0.7189250700280112) 100%
+  background: rgb(20, 27, 65);
+  background: linear-gradient(
+    90deg,
+    rgba(20, 27, 65, 0.8281687675070029) 0%,
+    rgba(71, 95, 230, 0.8393732492997199) 50%,
+    rgba(165, 225, 255, 0.4948354341736695) 100%
   );
   padding: 45px;
   border-radius: 30px;
+}
+
+a:hover {
+  background: rgb(149, 30, 179);
+  background: linear-gradient(
+    0deg,
+    rgba(149, 30, 179, 1) 0%,
+    rgba(3, 10, 102, 0.9850315126050421) 100%
+  );
+  margin: 2px;
+  padding: 2px;
+  border-radius: 15px;
+  transform: scale(1.4);
 }
 
 .data ul {
@@ -89,24 +125,38 @@
 
 .history {
   background: rgb(223, 153, 240);
-  background: radial-gradient(
-    circle,
-    rgba(223, 153, 240, 0.7357317927170868) 0%,
-    rgba(223, 153, 240, 0.7189250700280112) 100%
+  background: rgb(20, 27, 65);
+  background: linear-gradient(
+    90deg,
+    rgba(20, 27, 65, 0.8281687675070029) 0%,
+    rgba(71, 95, 230, 0.8393732492997199) 50%,
+    rgba(165, 225, 255, 0.4948354341736695) 100%
   );
   padding: 45px;
   border-radius: 25px;
 }
 
 .networking {
-  background: rgb(223, 153, 240);
-  background: radial-gradient(
-    circle,
-    rgba(223, 153, 240, 0.7357317927170868) 0%,
-    rgba(223, 153, 240, 0.7189250700280112) 100%
+  background: rgb(20, 27, 65);
+  background: linear-gradient(
+    90deg,
+    rgba(20, 27, 65, 0.8281687675070029) 0%,
+    rgba(71, 95, 230, 0.8393732492997199) 50%,
+    rgba(165, 225, 255, 0.4948354341736695) 100%
   );
   padding: 45px;
   border-radius: 25px;
+}
+.insplist ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  text-align: center;
+}
+.insplist img{
+  border-radius: 50%;
+  border: 5px solid var(--cor-terceira);
 }
 
 @media (max-width: 727px) {
