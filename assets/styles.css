@@ -40,7 +40,7 @@
   ); */
   min-height: 100vh;
   font-size: 30px;
-  border-right: 5px solid white;
+  border-right: 2px solid white;
 }
 .title {
   font-size: 36px;
@@ -73,13 +73,14 @@
   gap: 20px;
 }
 .icons:hover {
+  transition: fill 0.5s ease;
   border-radius: 50%;
 }
+
 .content {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 50px;
   background: rgb(7, 6, 51);
   background: linear-gradient(
     90deg,
@@ -88,7 +89,6 @@
     rgba(118, 209, 255, 1) 100%
   );
   min-height: 100vh;
-  flex: 1;
   font-family: "Inter" bold, sans-serif;
   font-size: 22px;
   color: white;
@@ -102,11 +102,10 @@
     rgba(71, 95, 230, 0.8393732492997199) 50%,
     rgba(165, 225, 255, 0.4948354341736695) 100%
   );
-  padding: 45px;
+  padding: 20px;
   border-radius: 30px;
 }
-
-a:hover {
+.apresentacao a:hover {
   background: rgb(149, 30, 179);
   background: linear-gradient(
     0deg,
@@ -132,7 +131,7 @@ a:hover {
     rgba(71, 95, 230, 0.8393732492997199) 50%,
     rgba(165, 225, 255, 0.4948354341736695) 100%
   );
-  padding: 45px;
+  padding: 20px;
   border-radius: 25px;
 }
 
@@ -144,28 +143,88 @@ a:hover {
     rgba(71, 95, 230, 0.8393732492997199) 50%,
     rgba(165, 225, 255, 0.4948354341736695) 100%
   );
-  padding: 45px;
+  padding: 20px;
   border-radius: 25px;
 }
-.insplist ul{
+.insplist a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.insplist ul {
   list-style: none;
   display: flex;
   flex-direction: row;
-  gap: 25px;
+  gap: 27px;
   text-align: center;
 }
-.insplist img{
+
+.insplist {
+  position: relative;
+}
+.insplist {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.insplist img:hover {
+  transform: scale(1.1);
+}
+
+.insplist h1:hover {
+  transition: font-size 1s ease;
+  font-size: 30px;
+  background-color: #0077b5;
+  border-radius: 5px;
+}
+.insplist img {
   border-radius: 50%;
   border: 5px solid var(--cor-terceira);
 }
 
-@media (max-width: 727px) {
+@media (max-width: 812px) {
+  
+  * {
+    font-size: 17px;
+  }
+
   .container {
-    flex-direction: column;
+    flex-direction: center;
+  }
+  .container img {
+    width: 250px;
+    margin-right: 25px;
+    justify-content: center;
   }
 
   .apresentacao {
-    order: -1;
-    margin-bottom: 20px;
+    background-image: url("https://s2.glbimg.com/FRyrYDBiOhDglCRobjP2Nxvg0Po=/e.glbimg.com/og/ed/f/original/2017/01/12/van-gogh.gif");
+    background-position: cover;
+    background-repeat: no-repeat;
+    background-image: cover;
+    border-right: blue;
+  }
+
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  
+  .insplist {
+    overflow-x: scroll;
+  }
+  
+  .data {
+    order: 2;
+  }
+  .history{
+    order: 3;
+  }
+  .insplist {
+    order: 1;
   }
 }
