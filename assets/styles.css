@@ -24,27 +24,21 @@
   border-radius: 15px;
   
 } */
+.title {
+  font-size: 36px;
+  font-family: "Inter", sans-serif;
+}
+
 .apresentacao {
   display: flex;
   flex-direction: column;
-  max-width: 400px;
+  max-width: 420px;
   width: 100%;
   float: left;
   background-image: url("https://s2.glbimg.com/FRyrYDBiOhDglCRobjP2Nxvg0Po=/e.glbimg.com/og/ed/f/original/2017/01/12/van-gogh.gif");
   background-size: cover;
-  /* background: rgb(223, 153, 240);
-  background: linear-gradient(
-    0deg,
-    rgba(223, 153, 240, 1) 0%,
-    rgba(189, 45, 135, 1) 100%
-  ); */
   min-height: 100vh;
   font-size: 30px;
-  border-right: 2px solid white;
-}
-.title {
-  font-size: 36px;
-  font-family: "Inter", sans-serif;
 }
 .apresentacao img {
   border-radius: 50%;
@@ -92,6 +86,8 @@
   font-family: "Inter" bold, sans-serif;
   font-size: 22px;
   color: white;
+  padding: 20px;
+
 }
 
 .data {
@@ -183,48 +179,57 @@
   border: 5px solid var(--cor-terceira);
 }
 
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: 3px white solid ;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+}
+
 @media (max-width: 812px) {
   
   * {
     font-size: 17px;
   }
-
   .container {
     flex-direction: center;
+    background-image: url("https://s2.glbimg.com/FRyrYDBiOhDglCRobjP2Nxvg0Po=/e.glbimg.com/og/ed/f/original/2017/01/12/van-gogh.gif");
   }
   .container img {
     width: 250px;
     margin-right: 25px;
     justify-content: center;
   }
+  .apresentacao a{
+    font-size: 35px;
+    font-family: sans-serif;
+  }
 
   .apresentacao {
-    background-image: url("https://s2.glbimg.com/FRyrYDBiOhDglCRobjP2Nxvg0Po=/e.glbimg.com/og/ed/f/original/2017/01/12/van-gogh.gif");
     background-position: cover;
     background-repeat: no-repeat;
     background-image: cover;
-    border-right: blue  ;
+    align-items: center;
+    border-bottom: 2px blue solid;
+    border-radius: 4px;
   }
-
 
   .content {
     display: flex;
     flex-direction: column;
     padding: 20px;
     overflow-x: hidden;
+    gap: 20px;
   }
   
   .insplist {
     overflow-x: scroll;
-  }
-  
-  .data {
-    order: 2;
-  }
-  .history{
-    order: 3;
-  }
-  .insplist {
-    order: 1;
   }
 }
